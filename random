@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+// macht diese Funktion zu einem eigenen Programm
+// .js im Dateinamen entfernen
+
+const input = Number(process.argv[2])
+const max = Number.isNaN(input) ? undefined : input
+const result = random(max)
+console.log(result)
+
+function random(max = 10) {
+  return Math.floor(Math.random() * (max + 1))
+}
